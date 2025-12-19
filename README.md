@@ -65,8 +65,9 @@ WEIGHTS = {
     'Portfolio': 0.01
 }
 
-# 3. Bonus Points (Added to every student's final score)
-BONUS_POINTS = 1.0 
+# 4. Global Bonus Points (Added to final score)
+BONUS_POINTS = 0.5
+
 4. Run
 Bash
 
@@ -133,13 +134,14 @@ WEIGHTS = {
 }
 
 # 3. 全员加分 (例如全班加 1 分)
-BONUS_POINTS = 1.0 
+BONUS_POINTS = 0.5
 4. 运行
 Bash
 
 python main.py
 📝 License
 MIT License. Free for all TAs to use.
+
 
 
 
