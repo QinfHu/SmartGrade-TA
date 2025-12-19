@@ -1,0 +1,9 @@
+# Ignore data files (Protect Student Privacy)
+*.csv
+*.xls
+*.xlsx
+*.DS_Store
+
+# Ignore Python cache
+__pycache__/
+*.pyc
