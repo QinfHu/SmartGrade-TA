@@ -34,7 +34,11 @@ class CourseGrader:
 
     def _smart_extract_score(self, keyword):
         """
-        Fuzzy match columns based on keywords (Brightspace/Canvas format compatible).
+        Fuzzy match columns based on keywords.
+        Priority:
+        1. Brightspace format (Subtotal Numerator)
+        2. Canvas format (Points Grade / MaxPoints)
+        3. Simple/Clean format (Direct match for demos or manual CSVs)
         """
         target_col = None
         max_points = 100.0
@@ -47,15 +51,31 @@ class CourseGrader:
                 if denom_col in self.df.columns:
                     return ((self.df[target_col] / self.df[denom_col].replace(0, np.nan)) * 100).fillna(0)
         
-        # Strategy 2: Look for Item columns
+        # Strategy 2: Look for Item columns (Canvas style)
         if not target_col:
             for col in self.df.columns:
+                # Must contain keyword, contain 'Points Grade', and NOT be 'Weighted'
                 if keyword.lower() in col.lower() and 'Points Grade' in col and 'Weighted' not in col:
                     target_col = col
                     match = re.search(r'MaxPoints:([\d\.]+)', col)
                     if match: max_points = float(match.group(1))
                     return ((self.df[target_col] / max_points) * 100).fillna(0)
         
+        # --- NEW Strategy 3: Simple Match (兜底逻辑：适配 Demo 数据) ---
+        if not target_col:
+            for col in self.df.columns:
+                # If the column name is exactly the keyword (case-insensitive)
+                # OR if the column is just "Homework" while searching for "Homework"
+                clean_col = col.strip().lower()
+                clean_keyword = keyword.strip().lower()
+                
+                if clean_keyword == clean_col:
+                    try:
+                        # Ensure it's numeric
+                        return pd.to_numeric(self.df[col], errors='coerce').fillna(0)
+                    except:
+                        pass
+
         print(f"⚠️  Warning: Could not find column for '{keyword}'. Defaulting to 0.")
         return pd.Series([0] * len(self.df))
 
