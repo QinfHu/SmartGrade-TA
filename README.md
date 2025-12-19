@@ -13,7 +13,8 @@
 
 ## 📸 Demo & Screenshots
 
-
+![SmartGrade Report Preview](assets/demo_preview.png)
+*(Auto-generated report showing color-coded final scores, curve adjustments, and automatic flag detection for missing assignments.)*
 
 ---
 
@@ -29,6 +30,7 @@ It solves the biggest headaches for TAs:
     * 🚩 **Missing assignments** (0 scores)
     * ⚠️ **"Borderline" students** (e.g., within 0.5 points of the next letter grade - crucial for deciding curve).
 * **Privacy First:** Built-in `.gitignore` ensures **student data is NEVER uploaded to GitHub**.
+* **Flexible Input:** Smartly recognizes both complex LMS exports (Brightspace/Canvas) AND simple manual CSV files.
 
 ### 🚀 Quick Start
 
@@ -89,11 +91,13 @@ Git Protection: The repository includes a pre-configured .gitignore to exclude *
 SmartGrade-TA 是一款专为助教 (TA) 设计的成绩处理自动化工具。它可以将学校系统（如 Brightspace/Canvas）导出的原始 CSV 成绩单，一键转换为排版精美、符合科研习惯的 Excel 报表。
 
 ✨ 核心痛点解决方案
-自动加权计算：根据你设定的权重（如：作业 30%，期末 40%）自动计算总分，告别手动 Excel 公式。
+- **自动加权计算**：根据你设定的权重（如：作业 30%，期末 40%）自动计算总分，告别手动 Excel 公式。
 
-直观的分数对比：报表中并列展示 “原始分” (灰色) 和 “含加分后的最终分” (绿色高亮)，一目了然。
+- **直观的分数对比**：报表中并列展示 “原始分” (灰色) 和 “含加分后的最终分” (绿色高亮)，一目了然。
 
-异常与边缘检测：自动在备注栏标记：
+- **异常与边缘检测**：自动在备注栏标记：
+
+- **智能兼容输入**：既支持 Brightspace/Canvas 导出的复杂原始数据，也支持手写的简单 CSV 表格。
 
 ❌ 缺交 (Missing): 作业或考试为 0 分。
 
@@ -130,4 +134,5 @@ Bash
 python main.py
 📝 License
 MIT License. Free for all TAs to use.
+
 
