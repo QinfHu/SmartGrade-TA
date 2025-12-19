@@ -2,7 +2,7 @@
 
 **SmartGrade-TA** is a Python-based automation tool designed for Teaching Assistants (TAs) and Instructors. It instantly converts raw CSV grade exports (from LMS like Brightspace or Canvas) into professional, scientific-style Excel reports.
 
-It handles weighted calculations, applies bonus points, detects "borderline" students, and formats the output for easy review by Professors or Department Chairs.
+It handles weighted calculations, applies bonus points, detects "borderline" students, and formats the output for easy review by Professors.
 
 ---
 
@@ -149,4 +149,5 @@ Rubric: 本次评分使用的分数线标准说明。
 防止误传： 项目内置了 .gitignore 文件，配置为自动忽略所有的 .csv 和 .xlsx 文件。这意味着即使你执行了 git 上传命令，真实的成绩单也不会被上传到 GitHub，确保绝对安全。
 
 📝 License
+
 MIT License. Free for all TAs to use.
