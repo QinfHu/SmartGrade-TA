@@ -4,7 +4,7 @@ from grader_lib import CourseGrader
 
 # 1. Input File Name (CSV exported from Brightspace/Canvas)
 # IMPORTANT: Put your csv file in this folder.
-INPUT_FILE = 'YOUR_FILE_NAME_HERE.csv' 
+INPUT_FILE = 'You file name.csv' 
 
 # 2. Output File Name
 OUTPUT_FILE = 'Final_Grades_Report.xlsx'
@@ -13,16 +13,16 @@ OUTPUT_FILE = 'Final_Grades_Report.xlsx'
 # Keys must match keywords in your CSV column headers.
 # Values should sum to 1.0 (or close to it).
 WEIGHTS = {
-    'Homework': 0.28,
+    'Homework': 0.20,
     'Lab': 0.06,
-    'Quiz': 0.10,
-    'Midterm': 0.32,
-    'Final': 0.20,
-    'Portfolio': 0.04
+    'Quiz': 0.13,
+    'Midterm': 0.30,
+    'Final': 0.30,
+    'Portfolio': 0.01
 }
 
 # 4. Global Bonus Points (Added to final score)
-BONUS_POINTS = 1.0
+BONUS_POINTS = 0.5
 
 # ===============================================
 
