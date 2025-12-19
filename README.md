@@ -13,7 +13,7 @@
 
 ## 📸 Demo & Screenshots
 
-*(Replace this text with a screenshot of your generated Excel report showing the color coding and formatting)*
+
 
 ---
 
@@ -130,3 +130,4 @@ Bash
 python main.py
 📝 License
 MIT License. Free for all TAs to use.
+
