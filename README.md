@@ -57,11 +57,12 @@ INPUT_FILE = 'Your_Course_Export.csv'
 
 # 2. Grading Weights (Must sum to approx 1.0)
 WEIGHTS = {
-    'Homework': 0.28,
-    'Lab':      0.06,
-    'Midterm':  0.32,
-    'Final':    0.20,
-    'Portfolio': 0.04
+    'Homework': 0.20,
+    'Lab': 0.06,
+    'Quiz': 0.13,
+    'Midterm': 0.30,
+    'Final': 0.30,
+    'Portfolio': 0.01
 }
 
 # 3. Bonus Points (Added to every student's final score)
@@ -136,6 +137,7 @@ Bash
 python main.py
 📝 License
 MIT License. Free for all TAs to use.
+
 
 
 
