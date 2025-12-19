@@ -124,9 +124,12 @@ INPUT_FILE = 'Your_Course_Export.csv'
 
 # 2. 权重配置 (名称需与表头关键词对应)
 WEIGHTS = {
-    'Homework': 0.28,
-    'Midterm':  0.32, # 期中
-    'Final':    0.20  # 期末
+    'Homework': 0.20,
+    'Lab': 0.06,
+    'Quiz': 0.13,
+    'Midterm': 0.30,
+    'Final': 0.30,
+    'Portfolio': 0.01
 }
 
 # 3. 全员加分 (例如全班加 1 分)
@@ -137,6 +140,7 @@ Bash
 python main.py
 📝 License
 MIT License. Free for all TAs to use.
+
 
 
 
