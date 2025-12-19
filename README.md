@@ -86,6 +86,8 @@ Local Processing: This script runs 100% on your local machine. No data is sent t
 
 Git Protection: The repository includes a pre-configured .gitignore to exclude *.csv and *.xlsx files. This prevents accidental data leaks to GitHub.
 
+=====================================================================================================================================================
+
 🇨🇳 中文说明 (Chinese Documentation)
 📖 项目简介
 SmartGrade-TA 是一款专为助教 (TA) 设计的成绩处理自动化工具。它可以将学校系统（如 Brightspace/Canvas）导出的原始 CSV 成绩单，一键转换为排版精美、符合科研习惯的 Excel 报表。
@@ -134,5 +136,6 @@ Bash
 python main.py
 📝 License
 MIT License. Free for all TAs to use.
+
 
 
