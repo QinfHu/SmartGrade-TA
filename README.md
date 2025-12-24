@@ -13,7 +13,7 @@
 
 ## 📸 Demo & Screenshots
 
-![SmartGrade Report Preview](assets/demo_preview.png)
+![SmartGrade Report Preview](assets/smartgrade_widescreen_final.gif)
 *(Auto-generated report showing color-coded final scores, curve adjustments, and automatic flag detection for missing assignments.)*
 
 ---
@@ -141,6 +141,7 @@ Bash
 python main.py
 📝 License
 MIT License. Free for all TAs to use.
+
 
 
 
